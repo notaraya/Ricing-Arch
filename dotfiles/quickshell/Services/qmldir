@@ -1,0 +1,85 @@
+AudioSoundPlayers AudioSoundPlayers.qml
+singleton BarWidgetService BarWidgetService.qml
+CalendarDankBackend CalendarDankBackend.qml
+CalendarKhalBackend CalendarKhalBackend.qml
+singleton CompositorService CompositorService.qml
+LyricsController LyricsController.qml
+LyricsSubscription LyricsSubscription.qml
+MultimediaProbe MultimediaProbe.qml
+NiriOutputCycle NiriOutputCycle.qml
+PipewireAudioBackend PipewireAudioBackend.qml
+PolkitAgentInstance PolkitAgentInstance.qml
+singleton AppSearchService AppSearchService.qml
+singleton AppleMusicArtService AppleMusicArtService.qml
+singleton AqueousConfigService AqueousConfigService.qml
+singleton AqueousService AqueousService.qml
+singleton AudioService AudioService.qml
+singleton BatteryService BatteryService.qml
+singleton BluetoothService BluetoothService.qml
+singleton BlurService BlurService.qml
+singleton BootEntryService BootEntryService.qml
+singleton BrightnessService BrightnessService.qml
+singleton CalendarService CalendarService.qml
+singleton CavaService CavaService.qml
+singleton ChangelogService ChangelogService.qml
+singleton ClipboardService ClipboardService.qml
+singleton CupsService CupsService.qml
+singleton DMSNetworkService DMSNetworkService.qml
+singleton DMSService DMSService.qml
+singleton DSearchService DSearchService.qml
+singleton DesktopService DesktopService.qml
+singleton DesktopWidgetRegistry DesktopWidgetRegistry.qml
+singleton DgopService DgopService.qml
+singleton DisplayService DisplayService.qml
+singleton FilesService FilesService.qml
+singleton FirstLaunchService FirstLaunchService.qml
+singleton GreeterService GreeterService.qml
+singleton GreeterUsersService GreeterUsersService.qml
+singleton HyprlandService HyprlandService.qml
+singleton ICCService ICCService.qml
+singleton IconThemeService IconThemeService.qml
+singleton IdleService IdleService.qml
+singleton KeybindsService KeybindsService.qml
+singleton KeyboardLayoutService KeyboardLayoutService.qml
+singleton LabwcService LabwcService.qml
+singleton LocationService LocationService.qml
+singleton LockPlacementService LockPlacementService.qml
+singleton Log Log.qml
+singleton LyricsService LyricsService.qml
+singleton MangoService MangoService.qml
+singleton MatugenPreviewService MatugenPreviewService.qml
+singleton MediaAccentService MediaAccentService.qml
+singleton MprisController MprisController.qml
+singleton MultimediaService MultimediaService.qml
+singleton MuxService MuxService.qml
+singleton NetworkService NetworkService.qml
+singleton NightModeService NightModeService.qml
+singleton NiriService NiriService.qml
+singleton NotepadStorageService NotepadStorageService.qml
+singleton NotificationService NotificationService.qml
+singleton PaletteInjectService PaletteInjectService.qml
+singleton PluginService PluginService.qml
+singleton PolkitService PolkitService.qml
+singleton PopoutService PopoutService.qml
+singleton PortalService PortalService.qml
+singleton PowerProfileWatcher PowerProfileWatcher.qml
+singleton PrivacyService PrivacyService.qml
+singleton RefreshRateService RefreshRateService.qml
+singleton SessionService SessionService.qml
+singleton SessionsService SessionsService.qml
+singleton SettingsSearchService SettingsSearchService.qml
+singleton ShellVersionService ShellVersionService.qml
+singleton SystemUpdateService SystemUpdateService.qml
+singleton TailscaleService TailscaleService.qml
+singleton ThemeAutoService ThemeAutoService.qml
+singleton ToastService ToastService.qml
+singleton TrackArtService TrackArtService.qml
+singleton TrashService TrashService.qml
+singleton UmbrielService UmbrielService.qml
+singleton UserInfoService UserInfoService.qml
+singleton UsersService UsersService.qml
+singleton VPNService VPNService.qml
+singleton WallpaperCyclingService WallpaperCyclingService.qml
+singleton WeatherService WeatherService.qml
+singleton WellbeingService WellbeingService.qml
+singleton WlrOutputService WlrOutputService.qml

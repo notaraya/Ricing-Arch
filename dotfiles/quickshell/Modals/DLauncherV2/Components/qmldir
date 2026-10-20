@@ -1,0 +1,5 @@
+LauncherHighlight LauncherHighlight.qml
+LauncherRow LauncherRow.qml
+LauncherSearchField LauncherSearchField.qml
+LauncherTile LauncherTile.qml
+singleton LauncherMetrics LauncherMetrics.qml

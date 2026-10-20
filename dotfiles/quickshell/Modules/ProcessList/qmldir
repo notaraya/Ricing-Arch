@@ -1,0 +1,12 @@
+DisksView DisksView.qml
+PerformanceCard PerformanceCard.qml
+PerformanceView PerformanceView.qml
+ProcessContextMenu ProcessContextMenu.qml
+ProcessesView ProcessesView.qml
+ProcessFilterChips ProcessFilterChips.qml
+ProcessListPopout ProcessListPopout.qml
+ProcessRow ProcessRow.qml
+ProcessSummary ProcessSummary.qml
+ProcessSystemHeader ProcessSystemHeader.qml
+SystemView SystemView.qml
+singleton ProcessListMetrics ProcessListMetrics.qml

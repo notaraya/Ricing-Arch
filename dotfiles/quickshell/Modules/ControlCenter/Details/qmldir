@@ -1,0 +1,14 @@
+AudioInputDetail AudioInputDetail.qml
+AudioOutputDetail AudioOutputDetail.qml
+AudioPortSelector AudioPortSelector.qml
+BatteryDetail BatteryDetail.qml
+BluetoothCodecSelector BluetoothCodecSelector.qml
+BluetoothDetail BluetoothDetail.qml
+BrightnessDetail BrightnessDetail.qml
+DiskUsageDetail DiskUsageDetail.qml
+DoNotDisturbDetail DoNotDisturbDetail.qml
+IdleInhibitorDetail IdleInhibitorDetail.qml
+NetworkDetail NetworkDetail.qml
+RunningAppsDetail RunningAppsDetail.qml
+VpnDetailContent VpnDetailContent.qml
+VpnProfileDelegate VpnProfileDelegate.qml

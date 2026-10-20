@@ -1,0 +1,5 @@
+AppLimitSheet AppLimitSheet.qml
+AppUsageList AppUsageList.qml
+DurationSteppers DurationSteppers.qml
+WeeklyChart WeeklyChart.qml
+singleton WellbeingMetrics WellbeingMetrics.qml

@@ -1,0 +1,3 @@
+ControlCenterContent ControlCenterContent.qml
+ControlCenterPopout ControlCenterPopout.qml
+singleton CcMetrics CcMetrics.qml
