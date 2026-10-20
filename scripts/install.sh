@@ -40,4 +40,9 @@ if [ -d "$REPO_DIR/scripts/tty-clock" ]; then
   (cd "$REPO_DIR/scripts/tty-clock" && make && install -D -m 755 tty-clock "$HOME/.local/bin/tty-clock")
 fi
 
+# Install pipe (animated pipes screensaver)
+if [ -f "$REPO_DIR/scripts/pipe" ]; then
+  install -D -m 755 "$REPO_DIR/scripts/pipe" "$HOME/.local/bin/pipe"
+fi
+
 echo "Done. Log out and back in to apply."

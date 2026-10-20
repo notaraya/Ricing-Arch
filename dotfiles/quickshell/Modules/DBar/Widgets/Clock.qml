@@ -39,7 +39,7 @@ BasePill {
                 ClockContent {
                     id: clock
                     vertical: root.isVerticalOrientation
-                    segmented: root.surfaceContext?.kind !== "dock" && BarMetrics.widgetStyle(root.barConfig) === "segments" && !root.noBackground
+                    segmented: root.surfaceContext?.kind !== "dock" && BarMetrics.widgetStyle(root.barConfig) === "segments"
                     displayMode: SettingsData.widgetOption("clock", root.widgetData, "clockCompactMode") ? "time" : "both"
                     dateFirst: root.widgetData?.clockDateOrder === "dateFirst"
                     fontSize: Theme.barTextSize(root.barThickness, root.barConfig?.fontScale, root.barConfig?.maximizeWidgetText)
