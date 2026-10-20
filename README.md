@@ -1,5 +1,9 @@
 # Ricing-Arch
 
+![Ricing-Arch](./Ricing_Arch.png)
+
+![Ricing-Arch Demo](./Ricing-Arch.gif)
+
 Arch Linux rice configuration repository.
 
 Includes:
@@ -10,7 +14,6 @@ Includes:
 - Vicinae config
 - Greetd greeter config
 - Wallpapers
-- tty-clock
 - Helper scripts
 
 ## Structure
