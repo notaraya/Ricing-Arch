@@ -10,6 +10,7 @@ Includes:
 - Vicinae config
 - Greetd greeter config
 - Wallpapers
+- tty-clock
 - Helper scripts
 
 ## Structure

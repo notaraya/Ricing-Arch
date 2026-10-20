@@ -28,8 +28,16 @@ for cfg in "$REPO_DIR"/dotfiles/*; do
   cp -r "$cfg" "$HOME/.config/$name"
 done
 
-# Copy wallpapers
-mkdir -p "$HOME/Pictures/Wallpapers"
-cp -r "$REPO_DIR"/wallpapers/* "$HOME/Pictures/Wallpapers/" 2>/dev/null || true
+# Copy icons
+mkdir -p "$HOME/.icons"
+cp -r "$REPO_DIR"/icons/* "$HOME/.icons/" 2>/dev/null || true
+
+# Ensure ~/.local/bin is on PATH
+if ! grep -q 'export PATH="$HOME/.local/bin:$PATH"' "$HOME/.bashrc" 2>/dev/null; then
+  echo 'export PATH="$HOME/.local/bin:$PATH"' >> "$HOME/.bashrc"
+fi
+if [ -d "$REPO_DIR/scripts/tty-clock" ]; then
+  (cd "$REPO_DIR/scripts/tty-clock" && make && install -D -m 755 tty-clock "$HOME/.local/bin/tty-clock")
+fi
 
 echo "Done. Log out and back in to apply."

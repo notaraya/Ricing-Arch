@@ -15,7 +15,8 @@
    },
    "theme": {
       "dark": {
-         "name": "wallpaper"
+         "name": "wallpaper",
+         "icon_theme": "Papirus-Dark"
       }
    }
 }
