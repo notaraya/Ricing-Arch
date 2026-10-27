@@ -184,3 +184,10 @@ Organized in categories under `Wallpapers/`: abstract, animals, anime, catppucci
 - The autostart has a ChatGPT URL that opens on start (line 21 in autostart.lua) - you may want to remove this
 - rmpc config is included but requires MPD to be running
 - Theme watching scripts require inotify-tools or similar
+
+
+## Preview
+
+![Ricing-Arch](Ricing-Arch.png)
+
+![Ricing-Arch Demo](Ricing-Arch.gif)
