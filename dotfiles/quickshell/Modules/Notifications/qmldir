@@ -1,8 +1,0 @@
-NotificationActions NotificationActions.qml
-NotificationCard NotificationCard.qml
-NotificationContextMenu NotificationContextMenu.qml
-NotificationSwipeGroup NotificationSwipeGroup.qml
-NotificationSwipeRow NotificationSwipeRow.qml
-NotificationSwipeWheel NotificationSwipeWheel.qml
-singleton DndPresets DndPresets.qml
-singleton NotificationMetrics NotificationMetrics.qml

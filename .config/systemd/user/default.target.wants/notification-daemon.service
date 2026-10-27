@@ -1,0 +1,15 @@
+
+
+[Unit]
+Description=GNOME Notification Daemon
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=dbus
+BusName=org.freedesktop.Notifications
+ExecStart=/usr/bin/env GDK_BACKEND=x11 /usr/lib/notification-daemon-1.0/notification-daemon --replace
+Restart=on-failure
+
+[Install]
+WantedBy=default.target

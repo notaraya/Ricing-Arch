@@ -1,7 +1,0 @@
-ConfirmDialogContent ConfirmDialogContent.qml
-ConfirmDialogOverlay ConfirmDialogOverlay.qml
-ConfirmModal ConfirmModal.qml
-DankModal DankModal.qml
-DModalHost DModalHost.qml
-DModal DModal.qml
-InputModal InputModal.qml

@@ -1,7 +1,0 @@
-GreeterContent GreeterContent.qml
-GreeterSurface GreeterSurface.qml
-GreeterUserPicker GreeterUserPicker.qml
-singleton GreetdMemory GreetdMemory.qml
-singleton GreetdSettings GreetdSettings.qml
-singleton GreeterState GreeterState.qml
-singleton GreeterUserTheme GreeterUserTheme.qml

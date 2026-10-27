@@ -1,9 +1,0 @@
-HyprlandOutputSettings HyprlandOutputSettings.qml
-ICCProfileInfoModal ICCProfileInfoModal.qml
-MonitorCanvas MonitorCanvas.qml
-MonitorIdentifyOverlay MonitorIdentifyOverlay.qml
-MonitorRect MonitorRect.qml
-NiriOutputSettings NiriOutputSettings.qml
-NoBackendMessage NoBackendMessage.qml
-OutputCard OutputCard.qml
-singleton DisplayConfigState DisplayConfigState.qml

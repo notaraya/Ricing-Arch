@@ -1,3 +1,0 @@
-SideSection {
-    section: "left"
-}

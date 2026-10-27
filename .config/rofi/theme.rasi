@@ -1,0 +1,98 @@
+* {
+    background:     #08070D;
+    background-alt: #060710;
+    surface:        #04050C;
+    selected:       #000106;
+    foreground:     #FACBB5;
+    border-color:   #FACBB5;
+    icon-theme:     "Papirus";
+}
+
+window {
+    background-color: @background;
+    border: 2px;
+    border-color: @border-color;
+    border-radius: 12px;
+    padding: 16px;
+}
+
+mainbox {
+    background-color: @background;
+    spacing: 12px;
+    children: [ inputbar, listview ];
+}
+
+inputbar {
+    background-color: @background-alt;
+    text-color: @foreground;
+    border: 1px;
+    border-color: @border-color;
+    border-radius: 8px;
+    padding: 10px;
+    spacing: 8px;
+    children: [ prompt, entry ];
+}
+
+prompt {
+    background-color: transparent;
+    text-color: @foreground;
+}
+
+entry {
+    background-color: transparent;
+    text-color: @foreground;
+    placeholder-color: @foreground;
+}
+
+
+listview {
+    background-color: @surface;
+    border-radius: 8px;
+    padding: 8px;
+    spacing: 4px;
+    columns: 1;
+    lines: 8;
+    fixed-height: false;
+    scrollbar: false;
+}
+
+
+
+element {
+    background-color: @surface;
+    text-color: @foreground;
+    border-radius: 6px;
+    padding: 8px;
+    spacing: 10px;
+    orientation: horizontal;
+}
+
+element normal.normal {
+    background-color: @surface;
+    text-color: @foreground;
+}
+
+element selected.normal {
+    background-color: @selected;
+    text-color: @foreground;
+    border: 1px;
+    border-color: @border-color;
+}
+
+element-icon {
+    size: 28px;
+    cursor: pointer;
+    background-color: transparent;
+}
+
+element-text {
+    background-color: transparent;
+    text-color: inherit;
+    vertical-align: 0.5;
+}
+
+
+element-icon {
+    background-color: transparent;
+    size: 1.2em;
+}

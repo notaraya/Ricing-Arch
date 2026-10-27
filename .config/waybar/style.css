@@ -1,0 +1,272 @@
+@import "waybar-colors.css";
+
+
+/* Global settings */
+* {
+    border: 0;
+    border-radius: 0;
+    min-height: 0;
+    font-family: 'JetBrainsMono Nerd Font';
+    font-size: 14px;
+}
+
+/* Module spacing */
+.modules-left {
+    margin-left: 5px;
+}
+
+#custom-arch {
+  margin-right: 10px;
+  padding: 0 8px;
+}
+
+#workspaces {
+  margin-left: 4px;
+}
+.modules-right {
+    margin-right: 5px;
+}
+
+/* Main Waybar */
+#waybar {
+    background: transparent;
+}
+
+/* Empty window title */
+window#waybar.empty #window {
+    background: transparent;
+    color: transparent;
+    padding: 0;
+    margin: 0;
+    transition: 0.5s;
+    border: none;
+}
+
+/* Empty media player */
+mpris.empty {
+    background: transparent;
+    border: none;
+    padding: 0;
+    margin: 0;
+}
+
+/* Workspaces */
+#workspaces {
+    background: @background1;
+    border: 0.5px solid alpha(@accent2, 0.4);
+    padding: 0;
+    margin: 5px 2px;
+    border-radius: 4px;
+}
+
+#workspaces button {
+    all: initial;
+    padding: 0 12px;
+    margin: 0;
+    color: @accent3;
+    border: 0.1px solid alpha(@accent2, 0.4);
+    background: transparent;
+    opacity: 1;
+}
+
+#workspaces button.active {
+    padding: 0 12px;
+    margin: 0;
+    background: @accent1;
+    color: @background1;
+    opacity: 1;
+}
+
+#workspaces button.empty {
+    background: @background2;
+    color: @accent5;
+}
+
+#workspaces button.empty.active {
+    opacity: 0.75;
+    background: @accent1;
+    color: @background1;
+}
+
+#workspaces button:first-child {
+    border-radius: 4px 0 0 4px;
+}
+
+#workspaces button:last-child {
+    border-radius: 0 4px 4px 0;
+}
+
+#workspaces button:first-child:last-child {
+    border-radius: 4px;
+}
+
+#workspaces button.active:hover,
+#workspaces button:hover {
+    background: @highlight;
+    color: @background4;
+    opacity: 1;
+    transition: 0.7s;
+}
+
+/* Standard modules */
+#tray,
+#custom-weather,
+#memory,
+#backlight,
+#clock,
+#cpu,
+#battery,
+#network,
+#bluetooth,
+#pulseaudio,
+#custom-screenrecording-indicator,
+#custom-screenrecording-indicator.active,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator,
+#custom-voxtype,
+#custom-update {
+    background-color: @background1;
+    color: @accent3;
+    border: 0.5px solid alpha(@accent2, 0.4);
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 4px;
+}
+
+/* Hover effects */
+#memory:hover,
+#clock:hover,
+#backlight:hover,
+#cpu:hover,
+#network:hover,
+#bluetooth:hover,
+#pulseaudio:hover,
+#custom-screenrecording-indicator:hover,
+#custom-idle-indicator:hover,
+#custom-notification-silencing-indicator:hover,
+#custom-update:hover {
+    background-color: @accent3;
+    color: @background4;
+    transition: 0.7s;
+}
+
+/* Custom module sizing */
+#custom-voxtype,
+#custom-update,
+#custom-screenrecording-indicator,
+#custom-idle-indicator,
+#custom-notification-silencing-indicator {
+    font-size: 14px;
+    border-radius: 4px;
+    padding: 0 11px 0 10px;
+    margin-left: 2px;
+    margin-right: 0;
+}
+
+/* Clock */
+#clock {
+    border-radius: 4px;
+    padding: 0 15px;
+    margin: 5px 0;
+    color: @highlight;
+}
+
+/* Hidden modules */
+.hidden {
+    opacity: 0;
+}
+
+/* Recording and active indicators */
+#custom-voxtype.recording,
+#custom-screenrecording-indicator.active,
+#custom-idle-indicator.active,
+#custom-notification-silencing-indicator.active {
+    color: @highlight;
+    background: @background2;
+}
+
+/* Wallpaper theme and battery */
+#custom-wallpaper-theme,
+#battery {
+    background-color: @accent1;
+    color: @background4;
+    border: 1px solid @background1;
+    min-width: 10px;
+    border-radius: 4px;
+    padding: 0 8px;
+    margin: 5px 2px;
+}
+
+#battery {
+    margin-left: 2px;
+}
+
+/* Media player and window title */
+#mpris,
+#window {
+    background-color: @background1;
+    color: @accent3;
+    border: 0.5px solid alpha(@accent2, 0.4);
+    padding: 5px 12px;
+    margin: 5px 2px;
+    border-radius: 4px;
+}
+
+/* Network and audio spacing */
+#network {
+    padding: 0 15px 0 10px;
+}
+
+#pulseaudio {
+    padding: 0 15px 0 10px;
+}
+
+/* Tooltips */
+tooltip {
+    border-radius: 5px;
+    background: @background2;
+    color: @highlight;
+    border: 2px solid alpha(@accent3, 0.5);
+}
+
+/* Screen recording indicator */
+#custom-screenrecording-indicator {
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+    color: transparent;
+}
+
+#custom-screenrecording-indicator.active {
+    background-color: @background2;
+    padding: 0 13px 0 10px;
+    color: @highlight;
+    animation-name: blink-recording;
+    animation-duration: 0.5s;
+}
+
+@keyframes blink-recording {
+    to {
+        color: @accent1;
+    }
+}
+
+/* Tray app context menus */
+/* Tray app context menus — follow theme colors */
+menu {
+  background-color: @color7;
+  color: @highlight;
+  border: 1px solid @color4;
+  border-radius: 8px;
+}
+
+menu menuitem {
+  background-color: transparent;
+  color: @highlight;
+  padding: 6px 12px;
+}
+
+menu menuitem:hover {
+  background-color: @color5;
+  color: @background;
+}

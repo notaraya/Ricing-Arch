@@ -1,0 +1,190 @@
+
+{
+  "layer": "bottom",
+  "position": "top",
+  "height": 42,
+  "spacing": 4,
+  "margin-top": 5,
+  "margin-left": 8,
+  "margin-right": 8,
+
+  "modules-left": [
+    "custom/arch",
+    "hyprland/workspaces",
+    "hyprland/window"
+  ],
+
+
+  "modules-center": [
+    "clock",
+    "custom/weather",
+    "custom/mpd"
+  ],
+
+  "modules-right": [
+    "tray",
+    "memory",
+    "network",
+    "bluetooth",
+    "pulseaudio",
+    "cpu",
+    "battery"
+  ],
+
+  "custom/arch": {
+    "format": "",
+    "tooltip": true,
+    "tooltip-format": "Arch Linux",
+    "on-click": "rofi -show drun -show-icons -theme ~/.config/rofi/theme.rasi",
+    "on-click-right": "kitty"
+  },
+
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "",
+      "default": "",
+      "empty": "",
+      "visible": "",
+      "urgent": ""
+    },
+    "show-special": false,
+    "sort-by": "number",
+    "on-click": "activate"
+  },
+
+  "hyprland/window": {
+    "format": "{class}",
+    "max-length": 25,
+    "separate-outputs": true,
+    "rewrite": {}
+  },
+
+  "clock": {
+    "format": "  {:%a, %d %b  %H:%M}",
+    "format-alt": "  {:%Y-%m-%d  %H:%M:%S}",
+    "tooltip": true,
+    "tooltip-format": "<big>{:%B %Y}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+
+  "custom/weather": {
+    "format": "{}",
+    "exec": "python -c 'import json,urllib.request; u=\"https://api.open-meteo.com/v1/forecast?latitude=32.73&longitude=74.87&current=temperature_2m,weather_code\"; d=json.load(urllib.request.urlopen(u,timeout=8))[\"current\"]; c=d[\"weather_code\"]; icons={0:\"☀\",1:\"🌤\",2:\"⛅\",3:\"☁\",45:\"🌫\",48:\"🌫\",51:\"🌦\",53:\"🌦\",55:\"🌧\",61:\"🌧\",63:\"🌧\",65:\"🌧\",71:\"🌨\",73:\"🌨\",75:\"❄\",80:\"🌦\",81:\"🌧\",82:\"🌧\",95:\"⛈\",96:\"⛈\",99:\"⛈\"}; print(icons.get(c,\"\"),round(d[\"temperature_2m\"]),\"°C\")' 2>/dev/null || echo 'Weather unavailable'",
+    "interval": 1800,
+    "restart-interval": 60,
+    "tooltip": true,
+    "tooltip-format": "Current weather in Jammu"
+  },
+
+  "custom/mpd": {
+    "format": "  {}",
+    "exec": "if mpc status >/dev/null 2>&1; then song=\"$(mpc current 2>/dev/null)\"; if [ -n \"$song\" ]; then printf '%s' \"$song\"; else printf 'No track'; fi; else printf 'MPD offline'; fi",
+    "interval": 5,
+    "exec-if": "command -v mpc >/dev/null 2>&1",
+    "max-length": 13,
+    "separate-outputs": false,
+    "tooltip": true,
+    "tooltip-format": "MPD music",
+    "on-click": "mpc toggle",
+    "on-click-right": "kitty -e rmpc",
+    "on-scroll-up": "mpc next",
+    "on-scroll-down": "mpc prev"
+  },
+
+  "tray": {
+    "icon-size": 16,
+    "spacing": 8
+  },
+
+  "memory": {
+    "interval": 5,
+    "format": " {percentage}%",
+    "tooltip": true,
+    "tooltip-format": "RAM: {used:0.1f} GiB / {total:0.1f} GiB"
+  },
+
+  "network": {
+    "interval": 5,
+    "format-wifi": "󰤨",
+    "format-ethernet": "󰈀",
+    "format-disconnected": "󰤭",
+    "tooltip": true,
+    "tooltip-format-wifi": "{essid}\nSignal: {signalStrength}%\nIP: {ipaddr}",
+    "tooltip-format-ethernet": "{ifname}\nIP: {ipaddr}",
+    "tooltip-format-disconnected": "Network disconnected",
+    "on-click": "kitty -e nmtui"
+  },
+
+  "bluetooth": {
+    "format": "",
+    "format-disabled": "󰂲",
+    "format-off": "󰂲",
+    "format-on": "",
+    "format-connected": "",
+    "tooltip": true,
+    "tooltip-format": "Bluetooth: {status}",
+    "on-click": "kitty -e bluetui"
+  },
+
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "󰝟",
+    "format-bluetooth": "󰂰",
+    "format-icons": {
+      "headphone": "",
+      "hands-free": "󰋎",
+      "headset": "󰋎",
+      "phone": "",
+      "portable": "",
+      "car": "",
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "scroll-step": 5,
+    "tooltip": true,
+    "tooltip-format": "Volume: {volume}%",
+    "on-click": "pavucontrol",
+    "on-click-right": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"
+  },
+
+  "cpu": {
+    "interval": 5,
+    "format": "\uf2db",
+    "tooltip": true,
+    "tooltip-format": "CPU usage: {usage}%"
+  },
+
+
+  "battery": {
+    "interval": 5,
+    "states": {
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}",
+    "format-charging": "{icon} ⚡",
+    "format-discharging": "{icon}",
+    "format-plugged": "{icon} ⚡",
+    "format-full": "{icon} ⚡",
+    "format-icons": [
+      "󰁺",
+      "󰁻",
+      "󰁼",
+      "󰁽",
+      "󰁾",
+      "󰁿",
+      "󰂀",
+      "󰂁",
+      "󰂂",
+      "󰁹"
+    ],
+    "tooltip": true,
+    "tooltip-format": "Battery: {capacity}%",
+    "tooltip-format-charging": "Charging: {capacity}%",
+    "tooltip-format-discharging": "Discharging: {capacity}%"
+  },
+
+}
