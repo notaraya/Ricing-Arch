@@ -185,6 +185,6 @@
     "tooltip-format": "Battery: {capacity}%",
     "tooltip-format-charging": "Charging: {capacity}%",
     "tooltip-format-discharging": "Discharging: {capacity}%"
-  },
+  }
 
 }
